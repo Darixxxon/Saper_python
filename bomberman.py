@@ -1,7 +1,6 @@
 import os
 import random
 
-
 class Point:
     def __init__(self, x, y):
         self.x = x
@@ -18,9 +17,7 @@ def check_if_end(board, number_of_flags, number_of_bombs, size):
                 good_spot += 1
     
     if (size**2 == num_checked + number_of_bombs) or good_spot == number_of_bombs:
-        return True
-    
-    
+        return True    
 
 def show_empty(board, size, position_x, position_y):
     queue = []
@@ -141,8 +138,6 @@ def game(size, number_of_bombs):
             print('CONGRATULATIONS!!!! YOU WON!!!')
             input()
             return
-            
-    
 
 while True:
     os.system('cls')
@@ -157,6 +152,3 @@ while True:
         number_of_bombs = int(size**2 * 0.15625)
 
     game(size, number_of_bombs)
-    
-    
-    print(chr(2))

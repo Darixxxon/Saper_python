@@ -40,8 +40,7 @@ def show_board(board, size):
                 print('\u2592', end='')
             elif board[0][i - 1][j - 1] == 1 or board[1][i - 1][j - 1] == '☺':
                 print(board[1][i - 1][j - 1], end='')
-        print()
-                
+        print()               
 
 def draw_board(board, size, number_of_bombs, position_x, position_y):
     bomb_count = 0
@@ -62,8 +61,7 @@ def draw_board(board, size, number_of_bombs, position_x, position_y):
                             if board[1][l][o] == '☺':
                                 num += 1
             if num != 0:
-                board[1][i][j] = num
-     
+                board[1][i][j] = num    
 
 def print_game(board, size, position_x, position_y):
     for i in range(size + 2):
